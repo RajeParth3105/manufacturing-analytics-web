@@ -74,7 +74,7 @@ def parse_index_selection(selection_str, max_index, item_name):
     return sorted(selected)
 
 
-def generate_eol_report(df):
+def generate_eol_report(df, selected_comments, selected_file_names):
     required = {"File Name", "Comment", "Value"}
     if not required.issubset(set(df.columns)):
         missing = required - set(df.columns)
@@ -83,59 +83,6 @@ def generate_eol_report(df):
         )
 
     df.columns = df.columns.str.strip()
-    comments = sorted(df["Comment"].dropna().unique())
-    file_names = sorted(df["File Name"].dropna().unique())
-
-    st.subheader("Available comments")
-    st.write(
-        "Enter the index numbers for the comments you want to display as columns. "
-        "Use commas or ranges, for example: 1,3,5-7."
-    )
-    comment_index_df = pd.DataFrame(
-        {
-            "Index": range(1, len(comments) + 1),
-            "Comment": comments
-        }
-    )
-    st.dataframe(comment_index_df)
-    comment_selection = st.text_input(
-        "Select comment indexes:",
-        value="1-5",
-        key="comment_index_input"
-    )
-
-    st.subheader("Available file names")
-    st.write(
-        "Enter the index numbers for the file names you want to display as rows. "
-        "Use commas or ranges, for example: 1,2,4-6."
-    )
-    filename_index_df = pd.DataFrame(
-        {
-            "Index": range(1, len(file_names) + 1),
-            "File Name": file_names
-        }
-    )
-    st.dataframe(filename_index_df)
-    filename_selection = st.text_input(
-        "Select file name indexes:",
-        value="1-5",
-        key="filename_index_input"
-    )
-
-    selected_comment_indexes = parse_index_selection(
-        comment_selection,
-        len(comments),
-        "comment"
-    )
-    selected_filename_indexes = parse_index_selection(
-        filename_selection,
-        len(file_names),
-        "file name"
-    )
-
-    selected_comments = [comments[i - 1] for i in selected_comment_indexes]
-    selected_file_names = [file_names[i - 1] for i in selected_filename_indexes]
-
     filtered = df[
         (df["Comment"].isin(selected_comments)) &
         (df["File Name"].isin(selected_file_names))
@@ -157,8 +104,7 @@ def generate_eol_report(df):
     )
     output = output.sort_values("File Name").reset_index(drop=True)
 
-    return output, selected_comments, selected_file_names
-
+    return output
 
 def generate_analytics_report(df, file_name):
     analytics = ManufacturingAnalytics()
@@ -185,15 +131,79 @@ if uploaded_file:
         st.subheader("Input preview")
         st.dataframe(df.head())
 
-        if st.button("Generate report"):
-            try:
-                if mode == "EOL pivot / comment matrix":
-                    output_df, selected_comments, selected_file_names = generate_eol_report(df)
-                    if output_df is None:
-                        st.stop()
+        if mode == "EOL pivot / comment matrix":
+            comments = sorted(df["Comment"].dropna().unique())
+            file_names = sorted(df["File Name"].dropna().unique())
+
+            st.subheader("Available comment values")
+            st.write(
+                "There are many unique comments. Use the index numbers below to select which comments "
+                "should become columns in the output matrix."
+            )
+            comment_index_df = pd.DataFrame(
+                {
+                    "Index": range(1, len(comments) + 1),
+                    "Comment": comments
+                }
+            )
+            with st.expander("Show unique comments and their indexes", expanded=False):
+                st.dataframe(comment_index_df)
+
+            comment_selection = st.text_input(
+                "Select comment indexes (e.g. 1,3,5-8):",
+                value="1-5",
+                key="comment_index_input"
+            )
+
+            st.subheader("Available file names")
+            st.write(
+                "There are many file names. Use the index numbers below to select which file names "
+                "should become rows in the output matrix."
+            )
+            filename_index_df = pd.DataFrame(
+                {
+                    "Index": range(1, len(file_names) + 1),
+                    "File Name": file_names
+                }
+            )
+            with st.expander("Show file name indexes", expanded=False):
+                st.dataframe(filename_index_df)
+
+            filename_selection = st.text_input(
+                "Select file name indexes (e.g. 1,2,4-6):",
+                value="1-5",
+                key="filename_index_input"
+            )
+
+            if st.button("Generate report"):
+                try:
+                    selected_comment_indexes = parse_index_selection(
+                        comment_selection,
+                        len(comments),
+                        "comment"
+                    )
+                    selected_filename_indexes = parse_index_selection(
+                        filename_selection,
+                        len(file_names),
+                        "file name"
+                    )
+
+                    selected_comments = [comments[i - 1] for i in selected_comment_indexes]
+                    selected_file_names = [file_names[i - 1] for i in selected_filename_indexes]
+
+                    output_df = generate_eol_report(
+                        df,
+                        selected_comments,
+                        selected_file_names
+                    )
 
                     st.success("EOL report generated.")
+                    st.write("Selected comments:")
+                    st.write(selected_comments)
+                    st.write("Selected file names:")
+                    st.write(selected_file_names)
                     st.dataframe(output_df)
+
                     excel_buffer = to_excel_bytes(
                         [output_df],
                         ["EOL Report"],
@@ -205,7 +215,11 @@ if uploaded_file:
                         file_name="EOL_Report.xlsx",
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                     )
-                else:
+                except Exception as exc:
+                    st.error(str(exc))
+        else:
+            if st.button("Generate report"):
+                try:
                     summary_df, segment_df, root_cause_df = generate_analytics_report(
                         df,
                         uploaded_file.name
@@ -228,9 +242,9 @@ if uploaded_file:
                         label="Download Analytics Dashboard",
                         data=excel_buffer,
                         file_name="Analytics_Dashboard.xlsx",
-                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        mime="application/vnd.openxmlformats-officedocument-spreadsheetml.sheet"
                     )
-            except Exception as exc:
-                st.error(str(exc))
+                except Exception as exc:
+                    st.error(str(exc))
 else:
     st.info("Upload an Excel file to begin.")
