@@ -46,26 +46,63 @@ def generate_eol_report(df):
         )
 
     df.columns = df.columns.str.strip()
+    
+    # Get unique comments and file names
     comments = sorted(df["Comment"].dropna().unique())
+    file_names = sorted(df["File Name"].dropna().unique())
+    
+    st.subheader("Select Comments (Columns)")
+    st.write(f"Available comments: {len(comments)}")
     selected_comments = st.multiselect(
-        "Select comments to include in the matrix",
+        "Select comments to include",
         comments,
-        default=comments[:min(5, len(comments))]
+        default=comments[:min(5, len(comments))],
+        key="comment_select"
+    )
+
+    st.subheader("Select File Names (Rows)")
+    st.write(f"Available file names: {len(file_names)}")
+    selected_file_names = st.multiselect(
+        "Select file names to include",
+        file_names,
+        default=file_names,
+        key="filename_select"
     )
 
     if not selected_comments:
         st.warning("Select at least one comment to generate the report.")
-        return None, None
+        return None, None, None
 
-    filtered = df[df["Comment"].isin(selected_comments)]
+    if not selected_file_names:
+        st.warning("Select at least one file name to generate the report.")
+        return None, None, None
+
+    # Filter data by selected comments and file names
+    filtered = df[
+        (df["Comment"].isin(selected_comments)) &
+        (df["File Name"].isin(selected_file_names))
+    ]
+    
+    # Create pivot table
     output = filtered.pivot_table(
         index="File Name",
         columns="Comment",
         values="Value",
         aggfunc="first"
     ).reset_index()
+    
+    # Reorder columns to match user selection
     output = output[["File Name"] + selected_comments]
-    return output, selected_comments
+    
+    # Reorder rows to match user selection
+    output["File Name"] = pd.Categorical(
+        output["File Name"],
+        categories=selected_file_names,
+        ordered=True
+    )
+    output = output.sort_values("File Name").reset_index(drop=True)
+    
+    return output, selected_comments, selected_file_names
 
 
 def generate_analytics_report(df, file_name):
@@ -96,12 +133,12 @@ if uploaded_file:
         if st.button("Generate report"):
             try:
                 if mode == "EOL pivot / comment matrix":
-                    output_df, selected_comments = generate_eol_report(df)
+                    output_df, selected_comments, selected_file_names = generate_eol_report(df)
                     if output_df is None:
                         st.stop()
 
                     st.success("EOL report generated.")
-                    st.dataframe(output_df.head())
+                    st.dataframe(output_df)
                     excel_buffer = to_excel_bytes(
                         [output_df],
                         ["EOL Report"],
@@ -121,11 +158,11 @@ if uploaded_file:
 
                     st.success("Analytics dashboard generated.")
                     st.write("Summary")
-                    st.dataframe(summary_df.head())
+                    st.dataframe(summary_df)
                     st.write("Segment analysis")
-                    st.dataframe(segment_df.head())
+                    st.dataframe(segment_df)
                     st.write("Root cause analysis")
-                    st.dataframe(root_cause_df.head())
+                    st.dataframe(root_cause_df)
 
                     excel_buffer = to_excel_bytes(
                         [summary_df, segment_df, root_cause_df],
