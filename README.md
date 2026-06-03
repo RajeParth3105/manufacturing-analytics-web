@@ -19,6 +19,12 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+   - If you want the simpler EOL comment matrix only, use:
+
+```bash
+streamlit run appnew.py
+```
+
 6. Open the browser URL that Streamlit shows.
 
 ## How it works

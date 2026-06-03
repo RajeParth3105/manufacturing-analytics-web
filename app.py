@@ -95,7 +95,8 @@ def generate_eol_report(df, selected_comments, selected_file_names):
         aggfunc="first"
     ).reset_index()
 
-    output = output[["File Name"] + selected_comments]
+    final_columns = ["File Name"] + [c for c in selected_comments if c in output.columns]
+    output = output[final_columns]
 
     output["File Name"] = pd.Categorical(
         output["File Name"],
