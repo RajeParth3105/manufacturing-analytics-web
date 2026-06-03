@@ -1,0 +1,79 @@
+[Auftrag]
+@GPD000	ALL
+@GPD002	IVACO
+@GPD001	k211499-N03
+@GPD003	DPM94MYC
+@GPD004	K211499N03
+@GPD010	(VersionQuelle: 486, LetzteÄnderung: 20.05.26 10:49:45)
+@GPD014	861
+@GPD015	6
+@GPD005	10000
+@GPD006	87
+@GPD012	K211499N03A262240268B
+@GPD011	NIO
+@GPD009	28.05.2026 - 13:10:32
+@GPD022	Admin
+[Station0]
+@SD000	DPMC
+@SD001	For Side Varinats
+@SD002	all_side1_____01.pp0
+@SD003	all_side1_____01k211499.pl0
+@SD004	001
+@SD005	PPRF:C
+@SD006	0
+@SD012	28.05.2026 - 15:54:35
+@SD013	28.05.2026 - 15:56:43
+@SD016	861
+@SD017	6
+@SD015	NIO
+@SD008	A
+@PM1	IO	HT	3 (5)	KORM	0,001	bar	0,000	0,000	11RD calibration OK
+@PM2	IO	HT	3 (6)	KORM	0,004	bar	0,000	0,000	21RD calibration OK
+@PM3	IO	HT	3 (7)	KORM	0,002	bar	0,000	0,000	22RD calibration OK
+@PM4	IO	HT	3 (8)	KORM	0,004	bar	0,000	0,000	24RD calibration OK
+@PM5	IO	HT	3 (9)	KORM	-0,356	mbar	0,000	0,000	DD1 calibration OK
+@PM6	IO	HT	3 (10)	KORM	1,200	mbar	0,000	0,000	DD2 calibration OK
+@PM7	IO	HT	3 (11)	KORM	-0,354	N	0,000	0,000	Torque calibration OK
+@PM8	IO	HT	4 (14)	TOL	-0,001	bar	-0,010	0,010	11RD Sensor correcction OK
+@PM9	IO	HT	4 (15)	TOL	0,000	Bar	-0,010	0,010	21RD Sensor correcction OK
+@PM10	IO	HT	4 (16)	TOL	0,002	bar	-0,010	0,010	22RD Sensor correcction OK
+@PM11	IO	HT	4 (17)	TOL	0,000	bar	-0,010	0,010	24RD Sensor correcction OK
+@PM12	IO	HT	4 (18)	TOL	-0,014	mbar	-2,000	2,000	DD1 Sensor correcction OK
+@PM13	IO	HT	4 (19)	TOL	-0,011	mbar	-2,000	2,000	DD2 Sensor correcction OK
+@PM14	IO	HT	4 (20)	TOL	-0,001	N	-0,100	0,100	Torque Sensor correcction OK
+@PM15	IO	HT	21 (59)	TOLS	5,651		2,500	8,800	P21 reaches to 2.5 bar pressure  OK
+@PM16	IO	HT	25 (67)	LST	2514,396	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM17	IO	HT	30 (77)	LST	2475,151	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM18	IO	HT	35 (87)	LST	2465,579	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM19	IO		91 (213)	ROTARY1	0,000		0,000	0,000	Servo 1 Move 20 degree OK
+@PM20	IO	HT	93 (218)	TOL	5,772	bar	2,500	9,000	21RD>2.5 bar OK
+@PM21	IO	HT	101 (235)	LST	427,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM22	IO	HT	101 (236)	LST	472,000	ms	0,0	5000,000	Pressure Reached at 21RD OK
+@PM23	IO	HT	102 (238)	TOL	11,209	bar	10,700	11,300	Check the 11RD pressure at begining (C/C) OK
+@PM24	IO	HT	102 (239)	TOL	8,009	bar	7,700	8,500	Check the 21RD pressure at begining  (C/C) OK
+@PM25	IO	HT	102 (240)	TOL	0,000	bar	-0,050	0,050	Check the 22RD pressure at begining  (C/C) OK
+@PM26	IO	HT	104 (243)	TOL	8,115	bar	7,700	8,500	Check the 21RD pressure OK
+@PM27	IO	HT	108 (252)	LST	2537,000	ms	0,0	20000,000	When P21 reaches quick drop pressure OK
+@PM28	IO	HT	110 (257)	VERK	6,645	0	5,000	11,000	Quick  dp angle (D) OK
+@PM29	IO	HT	125 (299)	VERK	23,973	0	16,000	44,000	Lever Lifting Load (C/C) OK
+@PM30	IO	HT	147 (358)	VERK	49,112	0	40,000	52,000	Zero point (G point ) OK
+@PM31	IO	HT	147 (359)	VERK	2,932	0	2,100	3,500	Torque @ M point OK
+@PM32	IO	HT	188 (452)	TOL	3,786	mm	-5,000	25,000	Check the distance of LVDT OK
+@PM33	NIO		190 (459)	MIN	2,781	Nm	-10,000	10,000	Minimum Torque NOK
+@PM34	IO	HT	195 (475)	VERK	61,760	0	56,000	62,000	B point Position OK
+@PM35	IO	HT	195 (476)	VERK	6,181	0	4,500	9,000	L position Torque OK
+@PM36	IO	HT	195 (480)	VERK	58,559	0	56,760	60,760	L position Angle OK
+@PM37	IO	HT	195 (481)	VERK	3,201	0	1,000	5,000	Diff. B & L position angle OK
+@PM38	IO	HT	195 (482)	VERK	3,734	N	0,000	4,500	I position torque OK
+@PM39	IO	HT	195 (484)	VERK	2,774	N	2,000	4,000	Torque Delta (?) (L-I)OK
+@PM40	IO	HT	195 (486)	VERK	4,066	mm	2,000	10,000	Radial stroke (C/C) OK
+@PM41	IO	HT	198 (494)	TOL	-0,002	bar	-0,050	0,050	Check the 21RD pressure @ B Point OK
+@PM42	IO	HT	198 (495)	TOL	0,002	bar	-0,050	0,050	Check the 22RD pressure @ B Point OK
+@PM43	IO	HT	198 (496)	TOL	11,075	bar	10,700	11,300	Check the 11RD pressure OK
+@PM44	IO	HT	202 (503)	LST	0,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM45	IO	HT	203 (505)	TOL	11,125	bar	10,700	11,300	Check the 11RD pressure OK
+@PM46	IO	HT	203 (506)	TOL	-0,001	bar	-0,100	0,100	Check the 21RD pressure OK
+@PM47	IO	HT	203 (507)	TOL	0,001	bar	-0,100	0,100	Check the 22RD pressure OK
+@PM48	NIO	HT	203 (507)	TOL	0,000		-0,100	0,100	
+#PP-SHA1=9DC659CD92D16960F7F3EB6D9E785146C461606C
+#FF-MD5=3C0770E37EB4398F0BC816F806EC2F1A

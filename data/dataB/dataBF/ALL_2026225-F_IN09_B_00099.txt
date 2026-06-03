@@ -1,0 +1,71 @@
+[Auftrag]
+@GPD000	ALL
+@GPD002	KB
+@GPD001	k211511-N02
+@GPD003	DPM97DS
+@GPD004	K211511N02
+@GPD010	(VersionQuelle: 231, LetzteÄnderung: 14.05.26 09:42:52)
+@GPD014	25498
+@GPD015	11
+@GPD005	200000
+@GPD006	851
+@GPD012	K211511N02A262250100B
+@GPD011	NIO
+@GPD009	29.05.2026 - 06:28:50
+@GPD022	Admin_(ad)
+[Station0]
+@SD000	EOL DPM
+@SD001	For bottom varient
+@SD002	all_bottom____01.pp0
+@SD003	all_bottom____01k211511n02.pl0
+@SD004	001
+@SD005	PPRF:B
+@SD006	0
+@SD012	29.05.2026 - 08:26:47
+@SD013	29.05.2026 - 08:27:30
+@SD016	25498
+@SD017	11
+@SD015	NIO
+@SD008	A
+@PM1	IO	HT	3 (5)	KORM	0,001	bar	0,000	0,000	11RD calibration OK
+@PM2	IO	HT	3 (6)	KORM	0,002	bar	0,000	0,000	21RD calibration OK
+@PM3	IO	HT	3 (7)	KORM	0,002	bar	0,000	0,000	22RD calibration OK
+@PM4	IO	HT	3 (8)	KORM	0,003	bar	0,000	0,000	24RD calibration OK
+@PM5	IO	HT	3 (9)	KORM	8,449	mbar	0,000	0,000	DD1 calibration OK
+@PM6	IO	HT	3 (10)	KORM	0,214	mbar	0,000	0,000	DD2 calibration OK
+@PM7	IO	HT	3 (11)	KORM	-0,008	N	0,000	0,000	Torque calibration OK
+@PM8	IO	HT	4 (15)	TOL	-0,001	bar	-0,010	0,010	11RD Sensor correcction OK
+@PM9	IO	HT	4 (16)	TOL	0,001	bar	-0,010	0,010	21RD Sensor correcction OK
+@PM10	IO	HT	4 (17)	TOL	-0,000	bar	-0,010	0,010	22RD Sensor correcction OK
+@PM11	IO	HT	4 (18)	TOL	-0,000	bar	-0,010	0,010	24RD Sensor correcction OK
+@PM12	IO	HT	4 (19)	TOL	0,010	mbar	-2,000	2,000	DD1 Sensor correcction OK
+@PM13	IO	HT	4 (20)	TOL	0,022	mbar	-2,000	2,000	DD2 Sensor correcction OK
+@PM14	IO	HT	4 (21)	TOL	-0,010	N	-0,100	0,100	Torque Sensor correcction OK
+@PM15	IO		24 (64)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM16	IO	HT	25 (66)	LST	1712,201	ms	0,0	50000,000	P21 Pressure reached OK
+@PM17	IO		26 (68)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM18	IO		27 (70)	CAN	25,000		0,000	2,000	Servo 1 Move 0 degree OK
+@PM19	IO	HT	28 (72)	LST	1470,000	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM20	IO	HT	28 (73)	LST	1622,000	ms	0,0	20000,000	P24 reaches to Supply pressure  OK
+@PM21	IO		29 (75)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM22	IO		24 (64)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM23	IO	HT	25 (66)	LST	1726,877	ms	0,0	50000,000	P21 Pressure reached OK
+@PM24	IO		26 (68)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM25	IO		27 (70)	CAN	25,000		0,000	2,000	Servo 1 Move 0 degree OK
+@PM26	IO	HT	28 (72)	LST	1470,000	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM27	IO	HT	28 (73)	LST	1624,000	ms	0,0	20000,000	P24 reaches to Supply pressure  OK
+@PM28	IO		29 (75)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM29	IO		30 (77)	CAN	25,000		30000,000	2,000	Servo 1 Move 20 degree OK
+@PM30	IO	HT	35 (85)	LST	709,000	ms	0,0	5000,000	Pressure Reached at 11RD OK
+@PM31	IO	HT	36 (87)	TOL	7,994	bar	7,700	8,300	Check the 11RD pressure OK
+@PM32	IO	HT	38 (94)	TOL	6,400	°	-50,000	300,000	Read the initial angel OK
+@PM33	IO		42 (105)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM34	IO		56 (138)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM35	IO		63 (155)	CAN	25,000		0,000	2,000	Stop the arm moving servo
+@PM36	NIO		75 (192)	CAN	0,000		0,000	2,000	
+@PM37	NIO		380 (957)	CAN	0,000		0,000	2,000	Position servo  paameter NOK
+@PM38	NIO	HT	382 (961)	TOL	19,639	°	3,000	8,000	Position Within Range NOK
+@PM39	NIO		384 (965)	CAN	0,000		0,000	1,000	Screw servo  paameter NOK
+@PM40	NIO		385 (967)	CAN	0,000		20000,000	1,000	Move Servo to Zero Position NOK
+#PP-SHA1=00000000000000000000000000000000
+#FF-MD5=DE151559F98ACE6CA624EF942FA84958

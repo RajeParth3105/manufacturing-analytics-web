@@ -1,0 +1,69 @@
+[Auftrag]
+@GPD000	ALL
+@GPD002	KB
+@GPD001	k211499-N03
+@GPD003	DPM94MYC
+@GPD004	k211499N03
+@GPD010	(VersionQuelle: 441, LetzteÄnderung: 25.05.26 18:34:50)
+@GPD014	7297
+@GPD015	13
+@GPD005	10000
+@GPD006	214
+@GPD012	K211499N03A262240289B
+@GPD011	NIO
+@GPD009	28.05.2026 - 06:39:48
+@GPD022	Admin_(ad)
+[Station0]
+@SD000	EOL DPM
+@SD001	For Side Varinats
+@SD002	all_side______01.pp0
+@SD003	all_side______01k211499n03.pl0
+@SD004	001
+@SD005	PPRF:A
+@SD006	0
+@SD012	28.05.2026 - 16:07:45
+@SD013	28.05.2026 - 16:08:48
+@SD016	7297
+@SD017	13
+@SD015	NIO
+@SD008	A
+@PM1	IO	HT	3 (5)	KORM	-0,007	bar	0,000	0,000	11RD calibration OK
+@PM2	IO	HT	3 (6)	KORM	-0,003	bar	0,000	0,000	21RD calibration OK
+@PM3	IO	HT	3 (7)	KORM	-0,002	bar	0,000	0,000	22RD calibration OK
+@PM4	IO	HT	3 (8)	KORM	0,000	bar	0,000	0,000	24RD calibration OK
+@PM5	IO	HT	3 (9)	KORM	1,201	mbar	0,000	0,000	DD1 calibration OK
+@PM6	IO	HT	3 (10)	KORM	3,229	mbar	0,000	0,000	DD2 calibration OK
+@PM7	IO	HT	3 (11)	KORM	0,271	N	0,000	0,000	Torque calibration OK
+@PM8	IO	HT	4 (15)	TOL	-0,001	bar	-0,010	0,010	11RD Sensor correcction OK
+@PM9	IO	HT	4 (16)	TOL	-0,001	bar	-0,010	0,010	21RD Sensor correcction OK
+@PM10	IO	HT	4 (17)	TOL	-0,001	bar	-0,010	0,010	22RD Sensor correcction OK
+@PM11	IO	HT	4 (18)	TOL	0,001	bar	-0,010	0,010	24RD Sensor correcction OK
+@PM12	IO	HT	4 (19)	TOL	0,009	mbar	-2,000	2,000	DD1 Sensor correcction OK
+@PM13	IO	HT	4 (20)	TOL	-0,014	mbar	-2,000	2,000	DD2 Sensor correcction OK
+@PM14	IO	HT	4 (21)	TOL	-0,002	N	-0,100	0,100	Torque Sensor correcction OK
+@PM15	IO		24 (64)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM16	IO	HT	25 (66)	TOLS	5,380		2,500	8,800	P21 reaches to 2.5 bar pressure  OK
+@PM17	IO		26 (69)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM18	IO		27 (71)	CAN	25,000		30000,000	2,000	Servo 1 Move 0 degree OK
+@PM19	IO	HT	38 (96)	TOL	0,180	°	-50,000	300,000	Read the initial angel OK
+@PM20	IO	HT	43 (107)	TOL	2,520	°	-50,000	300,000	Read the initial angel OK
+@PM21	IO		79 (204)	CAN	25,000		20000,000	2,000	Servo Move to Knee Point Position for setting
+@PM22	IO	HT	80 (206)	TOL	7,217	bar	6,500	7,800	P21 Pressure @ Knee point/driving position OK
+@PM23	IO		131 (323)	CAN	25,000		0,000	2,000	Servo 1 Move 30 degree OK
+@PM24	IO	HT	133 (328)	TOL	5,760	bar	2,500	9,000	21RD>2.5 bar OK
+@PM25	IO	HT	146 (360)	LST	0,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM26	IO	HT	146 (361)	LST	0,000	ms	0,0	5000,000	Pressure Reached at 21RD OK
+@PM27	IO	HT	147 (363)	TOL	10,984	bar	10,700	11,300	Check the 11RD pressure OK
+@PM28	NIO	HT	147 (364)	TOL	7,654	bar	7,700	8,500	Check the 21RD pressure NOK
+@PM29	IO	HT	147 (365)	TOL	0,000	bar	-0,050	0,050	Check the 22RD pressure OK
+@PM30	NIO	HT	149 (368)	TOL	7,682	bar	7,700	8,500	Check the 21RD pressure NOK
+@PM31	IO	HT	157 (394)	VERK	22,146	0	16,000	44,000	Lever Lifting Load (C/C) OK
+@PM32	IO	HT	160 (401)	LST	2293,000	ms	0,0	20000,000	When P21 reaches quick drop pressure OK
+@PM33	IO	HT	161 (404)	TOL	259,020	°	0,000	300,000	Angel at @ D position ok
+@PM34	IO	HT	162 (407)	VERK	7,454	0	5,000	11,000	Quick  dp angle (D) OK
+@PM35	IO		181 (457)	CAN	25,000		0,000	2,000	Servo Move OK
+@PM36	NIO		181 (457)	CAN	0,000		0,000	2,000	
+@PM37	IO	HT	425 (1098)	TOL	18,789	°	16,000	20,000	Position Within Range OK
+@PM38	IO		428 (1104)	CAN	25,000		20000,000	1,000	Move Servo to Zero Position OK
+#PP-SHA1=00000000000000000000000000000000
+#FF-MD5=F83F157DF789A268F267D64DC871311C

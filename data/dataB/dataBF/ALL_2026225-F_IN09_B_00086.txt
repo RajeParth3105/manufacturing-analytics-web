@@ -1,0 +1,85 @@
+[Auftrag]
+@GPD000	ALL
+@GPD002	KB
+@GPD001	k211511-N02
+@GPD003	DPM97DS
+@GPD004	K211511N02
+@GPD010	(VersionQuelle: 231, LetzteÄnderung: 14.05.26 09:42:52)
+@GPD014	25490
+@GPD015	6
+@GPD005	200000
+@GPD006	851
+@GPD012	K211511N02A262250091B
+@GPD011	NIO
+@GPD009	29.05.2026 - 06:28:50
+@GPD022	Admin_(ad)
+[Station0]
+@SD000	EOL DPM
+@SD001	For bottom varient
+@SD002	all_bottom____01.pp0
+@SD003	all_bottom____01k211511n02.pl0
+@SD004	001
+@SD005	PPRF:B
+@SD006	0
+@SD012	29.05.2026 - 07:17:00
+@SD013	29.05.2026 - 07:18:51
+@SD016	25490
+@SD017	6
+@SD015	NIO
+@SD008	A
+@PM1	IO	HT	3 (5)	KORM	0,000	bar	0,000	0,000	11RD calibration OK
+@PM2	IO	HT	3 (6)	KORM	0,003	bar	0,000	0,000	21RD calibration OK
+@PM3	IO	HT	3 (7)	KORM	0,002	bar	0,000	0,000	22RD calibration OK
+@PM4	IO	HT	3 (8)	KORM	0,003	bar	0,000	0,000	24RD calibration OK
+@PM5	IO	HT	3 (9)	KORM	8,441	mbar	0,000	0,000	DD1 calibration OK
+@PM6	IO	HT	3 (10)	KORM	0,161	mbar	0,000	0,000	DD2 calibration OK
+@PM7	IO	HT	3 (11)	KORM	-0,086	N	0,000	0,000	Torque calibration OK
+@PM8	IO	HT	4 (15)	TOL	-0,000	bar	-0,010	0,010	11RD Sensor correcction OK
+@PM9	IO	HT	4 (16)	TOL	0,003	bar	-0,010	0,010	21RD Sensor correcction OK
+@PM10	IO	HT	4 (17)	TOL	0,002	bar	-0,010	0,010	22RD Sensor correcction OK
+@PM11	IO	HT	4 (18)	TOL	-0,001	bar	-0,010	0,010	24RD Sensor correcction OK
+@PM12	IO	HT	4 (19)	TOL	-0,015	mbar	-2,000	2,000	DD1 Sensor correcction OK
+@PM13	IO	HT	4 (20)	TOL	0,031	mbar	-2,000	2,000	DD2 Sensor correcction OK
+@PM14	IO	HT	4 (21)	TOL	0,010	N	-0,100	0,100	Torque Sensor correcction OK
+@PM15	IO		24 (64)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM16	IO	HT	25 (66)	LST	1736,671	ms	0,0	50000,000	P21 Pressure reached OK
+@PM17	IO		26 (68)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM18	IO		27 (70)	CAN	25,000		0,000	2,000	Servo 1 Move 0 degree OK
+@PM19	IO	HT	28 (72)	LST	1486,000	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM20	IO	HT	28 (73)	LST	1640,000	ms	0,0	20000,000	P24 reaches to Supply pressure  OK
+@PM21	IO		29 (75)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM22	IO		24 (64)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM23	IO	HT	25 (66)	LST	1735,000	ms	0,0	50000,000	P21 Pressure reached OK
+@PM24	IO		26 (68)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM25	IO		27 (70)	CAN	25,000		0,000	2,000	Servo 1 Move 0 degree OK
+@PM26	IO	HT	28 (72)	LST	1481,000	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM27	IO	HT	28 (73)	LST	1636,000	ms	0,0	20000,000	P24 reaches to Supply pressure  OK
+@PM28	IO		29 (75)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM29	IO		30 (77)	CAN	25,000		30000,000	2,000	Servo 1 Move 20 degree OK
+@PM30	IO	HT	35 (85)	LST	671,000	ms	0,0	5000,000	Pressure Reached at 11RD OK
+@PM31	IO	HT	36 (87)	TOL	8,006	bar	7,700	8,300	Check the 11RD pressure OK
+@PM32	IO	HT	38 (94)	TOL	6,400	°	-50,000	300,000	Read the initial angel OK
+@PM33	IO		42 (105)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM34	IO		56 (138)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM35	IO		63 (155)	CAN	25,000		0,000	2,000	Stop the arm moving servo
+@PM36	IO		76 (194)	CAN	25,000		20000,000	2,000	Servo Move to Knee Point Position for setting
+@PM37	NIO	HT	77 (196)	TOL	6,691	bar	7,600	7,900	P21 Pressure @ Knee point NOK
+@PM38	IO	HT	115 (277)	LST	0,000	ms	0,0	15000,000	Pressure Reached at 21RD OK
+@PM39	IO	HT	115 (276)	LST	80,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM40	IO	HT	115 (278)	LST	128,000	ms	0,0	5000,000	Pressure Reached at 24RD OK
+@PM41	IO	HT	116 (280)	TOL	8,006	bar	7,700	8,300	Check the 11RD pressure OK
+@PM42	IO	HT	116 (281)	TOL	7,998	bar	7,700	8,300	Check the 21RD pressure OK
+@PM43	IO	HT	116 (282)	TOL	8,004	bar	7,700	8,300	Check the 22RD pressure OK
+@PM44	IO	HT	116 (283)	TOL	8,000	bar	7,700	8,300	Check the 24RD pressure OK
+@PM45	NIO	HT	119 (287)	STAB	-0,002	bar	-0,002	0,002	Pressure Stabilisation  @11 NOK
+@PM46	NIO		122 (291)	TOL	6,923	bar	7,700	8,300	11RD Tolerance test NOK
+@PM47	NIO		122 (292)	TOL	6,925	bar	7,700	8,300	21RD Tolerance test NOK
+@PM48	NIO		122 (293)	TOL	6,926	bar	7,700	8,300	22RD Tolerance test NOK
+@PM49	NIO		122 (294)	TOL	6,924	bar	7,700	8,300	24RD Tolerance test NOK
+@PM50	NIO		122 (295)	TOL	229,101	mbar	-100,000	100,000	DD1 Tolerance test NOK
+@PM51	NIO		122 (296)	TOL	-246,326	mbar	-100,000	100,000	DD2 Tolerance test NOK
+@PM52	NIO	HT	122 (296)	TOL	-246,326		-100,000	100,000	
+@PM53	IO	HT	382 (961)	TOL	6,388	°	3,000	8,000	Position Within Range OK
+@PM54	IO		385 (967)	CAN	25,000		20000,000	1,000	Move Servo to Zero Position OK
+#PP-SHA1=00000000000000000000000000000000
+#FF-MD5=FCFDB98A8E3F08A4C3986C360A419362

@@ -1,0 +1,125 @@
+[Auftrag]
+@GPD000	ALL
+@GPD002	KB
+@GPD001	k211499-N03
+@GPD003	DPM94MYC.
+@GPD004	K211499N03
+@GPD010	(VersionQuelle: 431, LetzteÄnderung: 25.05.26 16:25:03)
+@GPD014	5947
+@GPD015	4
+@GPD005	10000
+@GPD006	229
+@GPD012	K211499N03A262240285B
+@GPD011	NIO
+@GPD009	28.05.2026 - 14:46:34
+@GPD022	Admin_(ad)
+[Station0]
+@SD000	EOL DPM
+@SD001	For Side Varinats
+@SD002	all_side______01.pp0
+@SD003	all_side______01k211499n00.pl0
+@SD004	001
+@SD005	PPRF:B
+@SD006	0
+@SD012	28.05.2026 - 16:41:27
+@SD013	28.05.2026 - 16:47:11
+@SD016	5947
+@SD017	4
+@SD015	NIO
+@SD008	A
+@PM1	IO	HT	3 (5)	KORM	-0,004	bar	0,000	0,000	11RD calibration OK
+@PM2	IO	HT	3 (6)	KORM	-0,003	bar	0,000	0,000	21RD calibration OK
+@PM3	IO	HT	3 (7)	KORM	0,001	bar	0,000	0,000	22RD calibration OK
+@PM4	IO	HT	3 (8)	KORM	0,000	bar	0,000	0,000	24RD calibration OK
+@PM5	IO	HT	3 (9)	KORM	8,377	mbar	0,000	0,000	DD1 calibration OK
+@PM6	IO	HT	3 (10)	KORM	-0,184	mbar	0,000	0,000	DD2 calibration OK
+@PM7	IO	HT	3 (11)	KORM	-0,024	N	0,000	0,000	Torque calibration OK
+@PM8	IO	HT	4 (15)	TOL	-0,001	bar	-0,010	0,010	11RD Sensor correcction OK
+@PM9	IO	HT	4 (16)	TOL	0,001	bar	-0,010	0,010	21RD Sensor correcction OK
+@PM10	IO	HT	4 (17)	TOL	0,000	bar	-0,010	0,010	22RD Sensor correcction OK
+@PM11	IO	HT	4 (18)	TOL	0,003	bar	-0,010	0,010	24RD Sensor correcction OK
+@PM12	IO	HT	4 (19)	TOL	0,006	mbar	-2,000	2,000	DD1 Sensor correcction OK
+@PM13	IO	HT	4 (20)	TOL	0,048	mbar	-2,000	2,000	DD2 Sensor correcction OK
+@PM14	IO	HT	4 (21)	TOL	0,003	N	-0,100	0,100	Torque Sensor correcction OK
+@PM15	IO		24 (65)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM16	IO	HT	25 (67)	TOLS	5,853		2,500	9,000	P21 reaches to 2.5 bar pressure  OK
+@PM17	IO		26 (70)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM18	IO		27 (72)	CAN	25,000		30000,000	2,000	Servo 1 Move 0 degree OK
+@PM19	IO		24 (65)	CAN	25,000		0,000	2,000	Servo 1 Move 65 degree OK
+@PM20	IO	HT	25 (67)	TOLS	5,755		2,500	9,000	P21 reaches to 2.5 bar pressure  OK
+@PM21	IO		26 (70)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM22	IO		27 (72)	CAN	25,000		30000,000	2,000	Servo 1 Move 0 degree OK
+@PM23	IO		29 (76)	CAN	25,000		0,000	2,000	Motor Stop OK
+@PM24	IO		30 (78)	CAN	25,000		3000,000	2,000	Servo 1 Move 20 degree OK
+@PM25	IO	HT	38 (95)	TOL	275,940	°	-50,000	300,000	Read the initial angel OK
+@PM26	IO		48 (120)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM27	IO		56 (140)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM28	IO		63 (157)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM29	IO		69 (172)	SB	18,151		0,000	0,000	Calculation for touch point V11
+@PM30	IO		76 (196)	CAN	25,000		20000,000	2,000	Servo Move to Knee Point Position for setting
+@PM31	IO	HT	77 (198)	TOL	7,394	bar	6,500	7,800	P21 Pressure @ Knee point/driving position OK
+@PM32	IO		128 (317)	CAN	25,000		0,000	2,000	Servo 1 Move 30 degree OK
+@PM33	IO	HT	130 (322)	TOL	5,782	bar	2,500	9,000	21RD>2.5 bar OK
+@PM34	IO	HT	138 (339)	LST	0,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM35	IO	HT	138 (340)	LST	0,000	ms	0,0	5000,000	Pressure Reached at 21RD OK
+@PM36	IO	HT	139 (342)	TOL	10,984	bar	10,700	11,300	Check the 11RD pressure OK
+@PM37	IO	HT	139 (343)	TOL	8,015	bar	7,700	8,500	Check the 21RD pressure OK
+@PM38	IO	HT	139 (344)	TOL	0,002	bar	-0,050	0,050	Check the 22RD pressure OK
+@PM39	IO	HT	141 (347)	TOL	7,980	bar	7,700	8,500	Check the 21RD pressure OK
+@PM40	IO	HT	149 (371)	VERK	26,289	0	16,000	44,000	Lever Lifting Load (C/C) OK
+@PM41	IO	HT	152 (378)	LST	1186,000	ms	0,0	20000,000	When P21 reaches quick drop pressure OK
+@PM42	IO	HT	153 (381)	TOL	18,180	°	0,000	300,000	Angel at @ D position ok
+@PM43	IO	HT	154 (384)	VERK	7,714	0	5,000	11,000	Quick  dp angle (D) OK
+@PM44	IO		173 (434)	CAN	25,000		0,000	2,000	Servo Move OK
+@PM45	IO	HT	176 (440)	VERK	2,438	0	2,100	3,500	Torque @ M point OK
+@PM46	IO	HT	185 (463)	VERK	48,013	0	40,000	52,000	Zero point (G point ) OK
+@PM47	IO	HT	188 (470)	TOL	7,544	mm	-5,000	25,000	Check the distance of LVDT OK
+@PM48	IO	HT	206 (521)	VERK	57,345	0	56,000	62,000	B point Position OK
+@PM49	NIO	HT	206 (522)	VERK	55,638	0	67,000	73,000	L point Position NOK
+@PM50	IO	HT	206 (523)	VERK	7,495	0	4,500	9,000	L position Torque OK
+@PM51	IO	HT	206 (524)	VERK	3,831	N	0,000	4,500	I position torque OK
+@PM52	IO	HT	206 (526)	VERK	3,188	N	2,000	4,000	Torque Delta (?) (L-I)OK
+@PM53	IO	HT	206 (528)	VERK	4,431	mm	2,000	10,000	Radial stroke (C/C) OK
+@PM54	IO	HT	209 (534)	TOL	0,002	bar	-0,050	0,050	Check the 21RD pressure @ B Point OK
+@PM55	IO	HT	209 (535)	TOL	0,001	bar	-0,050	0,050	Check the 22RD pressure @ B Point OK
+@PM56	IO	HT	209 (536)	TOL	10,988	bar	10,700	11,300	Check the 11RD pressure OK
+@PM57	IO	HT	213 (543)	LST	23,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM58	IO	HT	214 (545)	TOL	11,026	bar	10,700	11,300	Check the 11RD pressure OK
+@PM59	IO	HT	214 (546)	TOL	-0,001	bar	-0,100	0,100	Check the 21RD pressure OK
+@PM60	IO	HT	214 (547)	TOL	-0,005	bar	-0,100	0,100	Check the 22RD pressure OK
+@PM61	IO	HT	217 (551)	STAB	0,000	bar	-0,002	0,002	Pressure Stabilisation  @11 OK
+@PM62	IO	HT	219 (559)	TOLV	0,001	bar	-0,010	0,010	Leakage @11RD OK
+@PM63	IO	HT	219 (560)	TOLV	-0,000	bar	-0,010	0,010	Leakage @21RD OK
+@PM64	IO	HT	219 (561)	TOLV	0,348	mbar	-20,000	20,000	Leakage @DD1 OK
+@PM65	IO	HT	220 (564)	VERK	-0,438	0	-2,000	10,000	DD1 Leak CC/MIN  @ B position OK
+@PM66	IO	HT	287 (749)	LST	111,814	ms	0,0	5000,000	Pressure Reached at 11RD OK
+@PM67	IO		293 (765)	CAN	25,000		0,000	2,000	Set Servo parameter OK
+@PM68	IO		294 (767)	CAN	25,000		0,000	2,000	Servo move when p21 reach as 4 bar OK
+@PM69	IO	HT	296 (776)	VERK	3,181	0	0,000	15,000	Hysteresis angle difference at lower pr. OK
+@PM70	IO	HT	296 (778)	VERK	10,821	0	0,000	15,000	Hysteresis angle difference at middle pr. OK
+@PM71	IO	HT	296 (780)	VERK	9,261	0	0,000	15,000	Hysteresis angle difference at higher pr. OK
+@PM72	IO	HT	301 (791)	TOL	10,989	bar	10,700	11,300	11RD Pressure (C/C) OK
+@PM73	IO	HT	301 (792)	TOL	8,329	bar	7,700	8,500	21RD Pressure (C/C) OK
+@PM74	IO	HT	301 (793)	TOL	0,002	bar	-0,050	0,050	22RD Pressure (C/C) OK
+@PM75	IO	HT	301 (794)	VERK	1,216	0	0,500	3,000	While returning check torque in NmOK
+@PM76	IO	HT	304 (802)	VERK	2,660	0	-0,050	4,500	Calculate P1-P21 @ 0 deg (C/C) OK
+@PM77	IO		306 (807)	CAN	25,000		0,000	2,000	Move the handle with servo 0.5 speed <0.5 Nm torque OK
+@PM78	IO	HT	308 (812)	TOL	17,901	°	17,151	19,151	Reconfirming touch point (handle reach to home) OK
+@PM79	IO	HT	115 (280)	LST	0,000	ms	0,0	20000,000	Pressure Reached at 21RD OK
+@PM80	IO	HT	115 (279)	LST	54,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM81	IO	HT	116 (282)	TOL	10,987	bar	10,700	11,300	Check the 11RD pressure (C/C) OK
+@PM82	IO	HT	116 (283)	TOL	8,311	bar	7,700	8,500	Check the 21RD pressure (C/C) OK
+@PM83	IO	HT	116 (284)	TOL	0,003	bar	-0,050	0,050	Check the 22RD pressure (C/C) OK
+@PM84	IO	HT	119 (288)	STAB	0,000	bar	-0,002	0,002	Pressure Stabilisation  @11 OK
+@PM85	IO	HT	122 (298)	TOLV	0,000	bar	-0,010	0,010	Leakage @11RD OK
+@PM86	IO	HT	122 (299)	TOLV	0,001	bar	-0,010	0,010	Leakage @21RD OK
+@PM87	IO	HT	122 (300)	TOLV	-0,184	mbar	-20,000	20,000	Leakage @DD1 OK
+@PM88	IO	HT	122 (301)	TOLV	0,983	mbar	-20,000	20,000	Leakage @DD2 OK
+@PM89	IO	HT	123 (304)	VERK	-0,404	cc/min	-2,000	10,000	DD1 Leak CC/MIN at A position OK
+@PM90	IO	HT	123 (306)	VERK	3,028	cc/min	-2,000	10,000	DD2 Leak CC/MIN  at A position OK
+@PM91	NIO		326 (855)	DIGF	0,000		0,000	1,000	Microswitch ON condition NOK
+@PM92	NIO		329 (861)	CAN	0,000		10000,000	2,000	
+@PM93	IO	HT	416 (1056)	TOL	17,179	°	10,000	20,000	Position Within Range OK
+@PM94	IO		419 (1062)	CAN	25,000		20000,000	1,000	Move Servo to Zero Position OK
+#PP-SHA1=00000000000000000000000000000000
+#FF-MD5=27AAE1AAFC3155FEEF6D252C72EB6088

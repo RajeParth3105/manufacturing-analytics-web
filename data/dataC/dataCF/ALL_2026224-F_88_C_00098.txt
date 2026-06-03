@@ -1,0 +1,85 @@
+[Auftrag]
+@GPD000	ALL
+@GPD002	IVACO
+@GPD001	k211499-N03
+@GPD003	DPM94MYC
+@GPD004	K211499N03
+@GPD010	(VersionQuelle: 486, LetzteÄnderung: 20.05.26 10:49:45)
+@GPD014	833
+@GPD015	17
+@GPD005	10000
+@GPD006	85
+@GPD012	K211499N03A262240211A
+@GPD011	NIO
+@GPD009	28.05.2026 - 06:45:07
+@GPD022	Admin
+[Station0]
+@SD000	DPMC
+@SD001	For Side Varinats
+@SD002	all_side1_____01.pp0
+@SD003	all_side1_____01k211499.pl0
+@SD004	001
+@SD005	PPRF:C
+@SD006	0
+@SD012	28.05.2026 - 10:30:28
+@SD013	28.05.2026 - 10:33:00
+@SD016	833
+@SD017	17
+@SD015	NIO
+@PM1	IO	HT	3 (5)	KORM	0,006	bar	0,000	0,000	11RD calibration OK
+@PM2	IO	HT	3 (6)	KORM	0,009	bar	0,000	0,000	21RD calibration OK
+@PM3	IO	HT	3 (7)	KORM	0,009	bar	0,000	0,000	22RD calibration OK
+@PM4	IO	HT	3 (8)	KORM	0,008	bar	0,000	0,000	24RD calibration OK
+@PM5	IO	HT	3 (9)	KORM	-0,374	mbar	0,000	0,000	DD1 calibration OK
+@PM6	IO	HT	3 (10)	KORM	1,229	mbar	0,000	0,000	DD2 calibration OK
+@PM7	IO	HT	3 (11)	KORM	-0,320	N	0,000	0,000	Torque calibration OK
+@PM8	IO	HT	4 (14)	TOL	0,001	bar	-0,010	0,010	11RD Sensor correcction OK
+@PM9	IO	HT	4 (15)	TOL	0,002	Bar	-0,010	0,010	21RD Sensor correcction OK
+@PM10	IO	HT	4 (16)	TOL	0,000	bar	-0,010	0,010	22RD Sensor correcction OK
+@PM11	IO	HT	4 (17)	TOL	-0,001	bar	-0,010	0,010	24RD Sensor correcction OK
+@PM12	IO	HT	4 (18)	TOL	-0,012	mbar	-2,000	2,000	DD1 Sensor correcction OK
+@PM13	IO	HT	4 (19)	TOL	-0,016	mbar	-2,000	2,000	DD2 Sensor correcction OK
+@PM14	IO	HT	4 (20)	TOL	-0,000	N	-0,100	0,100	Torque Sensor correcction OK
+@PM15	IO	HT	21 (59)	TOLS	5,573		2,500	8,800	P21 reaches to 2.5 bar pressure  OK
+@PM16	IO	HT	25 (67)	LST	2473,310	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM17	IO	HT	30 (77)	LST	2472,000	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM18	IO	HT	35 (87)	LST	2471,000	ms	0,0	20000,000	P21 reaches to Supply pressure  OK
+@PM19	IO		91 (213)	ROTARY1	0,000		0,000	0,000	Servo 1 Move 20 degree OK
+@PM20	IO	HT	93 (218)	TOL	5,593	bar	2,500	9,000	21RD>2.5 bar OK
+@PM21	IO	HT	101 (235)	LST	425,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM22	IO	HT	101 (236)	LST	507,000	ms	0,0	5000,000	Pressure Reached at 21RD OK
+@PM23	IO	HT	102 (238)	TOL	11,161	bar	10,700	11,300	Check the 11RD pressure at begining (C/C) OK
+@PM24	IO	HT	102 (239)	TOL	7,781	bar	7,700	8,500	Check the 21RD pressure at begining  (C/C) OK
+@PM25	IO	HT	102 (240)	TOL	0,001	bar	-0,050	0,050	Check the 22RD pressure at begining  (C/C) OK
+@PM26	IO	HT	104 (243)	TOL	7,837	bar	7,700	8,500	Check the 21RD pressure OK
+@PM27	IO	HT	108 (252)	LST	2557,000	ms	0,0	20000,000	When P21 reaches quick drop pressure OK
+@PM28	IO	HT	110 (257)	VERK	6,700	0	5,000	11,000	Quick  dp angle (D) OK
+@PM29	IO	HT	125 (299)	VERK	29,055	0	16,000	44,000	Lever Lifting Load (C/C) OK
+@PM30	IO	HT	147 (358)	VERK	46,695	0	40,000	52,000	Zero point (G point ) OK
+@PM31	IO	HT	147 (359)	VERK	3,125	0	2,100	3,500	Torque @ M point OK
+@PM32	IO	HT	188 (452)	TOL	3,769	mm	-5,000	25,000	Check the distance of LVDT OK
+@PM33	IO	HT	195 (475)	VERK	60,590	0	56,000	62,000	B point Position OK
+@PM34	IO	HT	195 (476)	VERK	6,388	0	4,500	9,000	L position Torque OK
+@PM35	IO	HT	195 (480)	VERK	56,846	0	55,590	59,590	L position Angle OK
+@PM36	IO	HT	195 (481)	VERK	3,743	0	1,000	5,000	Diff. B & L position angle OK
+@PM37	IO	HT	195 (482)	VERK	3,741	N	0,000	4,500	I position torque OK
+@PM38	IO	HT	195 (484)	VERK	3,001	N	2,000	4,000	Torque Delta (?) (L-I)OK
+@PM39	NIO	HT	195 (486)	VERK	1,674	mm	2,000	10,000	Radial stroke (C/C) NOK
+@PM40	IO	HT	198 (494)	TOL	0,002	bar	-0,050	0,050	Check the 21RD pressure @ B Point OK
+@PM41	IO	HT	198 (495)	TOL	0,003	bar	-0,050	0,050	Check the 22RD pressure @ B Point OK
+@PM42	IO	HT	198 (496)	TOL	11,034	bar	10,700	11,300	Check the 11RD pressure OK
+@PM43	IO	HT	202 (503)	LST	0,000	ms	0,0	2000,000	Pressure Reached at 11RD OK
+@PM44	IO	HT	203 (505)	TOL	11,073	bar	10,700	11,300	Check the 11RD pressure OK
+@PM45	IO	HT	203 (506)	TOL	-0,002	bar	-0,100	0,100	Check the 21RD pressure OK
+@PM46	IO	HT	203 (507)	TOL	0,001	bar	-0,100	0,100	Check the 22RD pressure OK
+@PM47	IO	HT	206 (511)	STAB	-0,000	bar	-0,002	0,002	Pressure Stabilisation  @11 OK
+@PM48	IO	HT	208 (519)	TOLV	0,002	bar	-0,010	0,010	Leakage @11RD OK
+@PM49	IO	HT	208 (520)	TOLV	0,000	bar	-0,010	0,010	Leakage @21RD OK
+@PM50	IO	HT	208 (521)	TOLV	1,897	mbar	-20,000	20,000	Leakage @DD1 OK
+@PM51	IO	HT	209 (524)	VERK	2,515	0	-2,000	10,000	DD1 Leak CC/MIN  @ B position OK
+@PM52	IO	HT	223 (556)	TOL	2,728	mm	0,000	10,000	Read the delta stroke from LabVIEW OK #
+@PM53	IO	HT	224 (558)	VERK	1,091	0	0,400	2,000	Calculation of delta stroke for Microswitch (S/C)OK
+@PM54	IO	HT	224 (559)	VERK	3,788	0	2,000	10,000	LVDT stroke @ Microswitch actuation  OK
+@PM55	NIO		262 (667)	LST	15000,000	ms	0,0	10000,000	LVDT reach position while lifting NOK
+#PP-SHA1=9DC659CD92D16960F7F3EB6D9E785146C461606C
+#FF-MD5=B55B51A5CCE4968BDB4EBAD4EB704419
