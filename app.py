@@ -37,6 +37,43 @@ def to_excel_bytes(dfs, sheet_names, output_name="report.xlsx"):
     return buffer
 
 
+def parse_index_selection(selection_str, max_index, item_name):
+    if not selection_str:
+        return []
+
+    selected = set()
+    parts = [part.strip() for part in selection_str.split(",") if part.strip()]
+    for part in parts:
+        if "-" in part:
+            bounds = [x.strip() for x in part.split("-", 1)]
+            if len(bounds) != 2 or not bounds[0].isdigit() or not bounds[1].isdigit():
+                raise ValueError(
+                    f"Invalid {item_name} range: '{part}'. Use numbers or ranges like 1-3."
+                )
+            start = int(bounds[0])
+            end = int(bounds[1])
+            if start > end:
+                raise ValueError(
+                    f"Invalid {item_name} range: '{part}'. Start must be <= end."
+                )
+            for idx in range(start, end + 1):
+                if 1 <= idx <= max_index:
+                    selected.add(idx)
+        else:
+            if not part.isdigit():
+                raise ValueError(
+                    f"Invalid {item_name} index: '{part}'. Use only numbers."
+                )
+            idx = int(part)
+            if 1 <= idx <= max_index:
+                selected.add(idx)
+
+    if not selected:
+        raise ValueError(f"No valid {item_name} indexes were selected.")
+
+    return sorted(selected)
+
+
 def generate_eol_report(df):
     required = {"File Name", "Comment", "Value"}
     if not required.issubset(set(df.columns)):
@@ -46,62 +83,80 @@ def generate_eol_report(df):
         )
 
     df.columns = df.columns.str.strip()
-    
-    # Get unique comments and file names
     comments = sorted(df["Comment"].dropna().unique())
     file_names = sorted(df["File Name"].dropna().unique())
-    
-    st.subheader("Select Comments (Columns)")
-    st.write(f"Available comments: {len(comments)}")
-    selected_comments = st.multiselect(
-        "Select comments to include",
-        comments,
-        default=comments[:min(5, len(comments))],
-        key="comment_select"
+
+    st.subheader("Available comments")
+    st.write(
+        "Enter the index numbers for the comments you want to display as columns. "
+        "Use commas or ranges, for example: 1,3,5-7."
+    )
+    comment_index_df = pd.DataFrame(
+        {
+            "Index": range(1, len(comments) + 1),
+            "Comment": comments
+        }
+    )
+    st.dataframe(comment_index_df)
+    comment_selection = st.text_input(
+        "Select comment indexes:",
+        value="1-5",
+        key="comment_index_input"
     )
 
-    st.subheader("Select File Names (Rows)")
-    st.write(f"Available file names: {len(file_names)}")
-    selected_file_names = st.multiselect(
-        "Select file names to include",
-        file_names,
-        default=file_names,
-        key="filename_select"
+    st.subheader("Available file names")
+    st.write(
+        "Enter the index numbers for the file names you want to display as rows. "
+        "Use commas or ranges, for example: 1,2,4-6."
+    )
+    filename_index_df = pd.DataFrame(
+        {
+            "Index": range(1, len(file_names) + 1),
+            "File Name": file_names
+        }
+    )
+    st.dataframe(filename_index_df)
+    filename_selection = st.text_input(
+        "Select file name indexes:",
+        value="1-5",
+        key="filename_index_input"
     )
 
-    if not selected_comments:
-        st.warning("Select at least one comment to generate the report.")
-        return None, None, None
+    selected_comment_indexes = parse_index_selection(
+        comment_selection,
+        len(comments),
+        "comment"
+    )
+    selected_filename_indexes = parse_index_selection(
+        filename_selection,
+        len(file_names),
+        "file name"
+    )
 
-    if not selected_file_names:
-        st.warning("Select at least one file name to generate the report.")
-        return None, None, None
+    selected_comments = [comments[i - 1] for i in selected_comment_indexes]
+    selected_file_names = [file_names[i - 1] for i in selected_filename_indexes]
 
-    # Filter data by selected comments and file names
     filtered = df[
         (df["Comment"].isin(selected_comments)) &
         (df["File Name"].isin(selected_file_names))
     ]
-    
-    # Create pivot table
+
     output = filtered.pivot_table(
         index="File Name",
         columns="Comment",
         values="Value",
         aggfunc="first"
     ).reset_index()
-    
-    # Reorder columns to match user selection
+
     output = output[["File Name"] + selected_comments]
-    
-    # Reorder rows to match user selection
+
     output["File Name"] = pd.Categorical(
         output["File Name"],
         categories=selected_file_names,
         ordered=True
     )
     output = output.sort_values("File Name").reset_index(drop=True)
-    
+
     return output, selected_comments, selected_file_names
 
 
